@@ -81,7 +81,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
 resource "azurerm_network_interface" "myterraformnic" {
     name                      = "PYC_NIC"
     location                  = "westeurope"
-    resource_group_name       = azurerm_resource_group.myterraformgroup.name
+    resource_group_name       = azurerm_resource_group.myterraformgroup.PYC_NIC
 
     ip_configuration {
         name                          = "PY_NicConfiguration"
@@ -171,3 +171,4 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     tags = {
         environment = "Terraform Demo"
     }
+}
