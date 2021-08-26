@@ -155,13 +155,14 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         version   = "latest"
     }
 
-    computer_name  = "PY_vm"
+    computer_name  = "myVM"
     admin_username = "azureuser"
     disable_password_authentication = true
 
     admin_ssh_key {
         username       = "azureuser"
         public_key     = tls_private_key.example_ssh.public_key_openssh
+      
     }
 
     boot_diagnostics {
